@@ -23,8 +23,8 @@ import sleekxmpp
 # throughout SleekXMPP, we will set the default encoding
 # ourselves to UTF-8.
 if sys.version_info < (3, 0):
-    reload(sys)
-    sys.setdefaultencoding('utf8')
+    from sleekxmpp.thirdparty.suelta.util import setdefaultencoding
+    setdefaultencoding('utf8')
 
 
 class Disco(sleekxmpp.ClientXMPP):
